@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #222;
+    background: #f4faf6;
+    font-family: Arial, sans-serif;
+}
+
+header,
+main,
+footer {
+    width: 100%;
+}
+
+header,
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+}
+
+header {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    border-bottom: 2px solid green;
+}
+
+header h1 {
+    margin: 0;
+}
+
+h1,
+h2 {
+    color: darkgreen;
+}
+
+nav a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 6px 10px;
+    border: 1px solid green;
+    color: darkgreen;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+    background: green;
+}
+
+section {
+    margin: 20px 0;
+    padding: 25px;
+    border: 1px solid lightgreen;
+    background: white;
+    box-shadow: 0 2px 5px #ccc;
+}
+
+.button {
+    display: inline-block;
+    padding: 8px 12px;
+    color: white;
+    background: green;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: darkgreen;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background: #e5f5e9;
+}
+
+/* Sensor cards */
+#dashboard {
+    background: #eef8f0;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.cards article {
+    padding: 15px;
+    border: 1px solid lightgreen;
+    background: white;
+    transition: 0.3s;
+}
+
+.cards article:hover {
+    box-shadow: 0 3px 8px #aaa;
+}
+
+.value {
+    color: darkgreen;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.normal,
+.warning {
+    padding: 4px 8px;
+    background: #e5f5e9;
+}
+
+.warning {
+    background: #fff0bd;
+}
+
+#alerts article {
+    margin-top: 10px;
+    padding: 10px;
+    border-left: 5px solid green;
+    background: #e5f5e9;
+}
+
+#alerts .danger-alert {
+    border-color: red;
+    background: #ffeaea;
+}
+
+footer {
+    border-top: 2px solid green;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
+/* Mobile version */
+@media (max-width: 650px) {
+    footer {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 5px 5px 0;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
